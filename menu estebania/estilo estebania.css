@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #BD5555;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #9F3535;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    background-color: #6D2424;
+    color: white;
+    padding: 10px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+main {
+    padding: 20px;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.producto {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.producto h3 {
+    min-height: 40px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #8A2929;
+    cursor: pointer;
+    margin: 4px;
+}
+
+button:hover {
+    background-color: #5C1818;
+}
+
+.carrito-contenedor {
+    margin-top: 35px;
+    overflow-x: auto;
+}
+
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: #333;
+}
+
+.tabla-carrito th,
+.tabla-carrito td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.tabla-carrito th {
+    background-color: #812D2D;
+    color: white;
+}
+
+.tabla-carrito input {
+    width: 60px;
+}
+
+.botones {
+    margin: 20px;
+}
+
+#vaciar {
+    background-color: #555;
+}
+
+#completar {
+    background-color: #246B3C;
+}
+
+#resumen {
+    background-color: white;
+    color: #333;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#resumen[hidden] {
+    display: none;
+}
+
+footer {
+    background-color: #9F3535;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+    .catalogo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .tabla-carrito th,
+    .tabla-carrito td {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .botones button {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+    }
+}

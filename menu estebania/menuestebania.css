@@ -1,0 +1,53 @@
+.producto {
+   width:  250px;
+   height: 200px;
+   
+}
+img  {
+     border:2px  solid  #087ff5;
+	 border-radius:  10px;
+	 box-shadow:  o 4px 10px  rgba(0, 0, 0, 0. 15) ;
+	 
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border: 1px solid #dce4ec;
+    border-radius:  10px;
+    padding: 5px;
+	background:  white;
+	
+}
+
+body {
+    background-color: linghtblue;
+
+}
+/* Boton Agregar al carrito */
+ .botom3 {
+      width: 100%;
+      background-color:087ff5;
+	  color: white;
+	  width: 100;
+	  backgrond-color: #087ff5;
+	  color: white;
+	  border: none;
+	  padding:  14px  20px;
+	  border-radius:  10px;
+	  font-weight:    bold;
+	  cursor: pointer;
+	  transition: 0.35;
+	  
+}
+
+/* Efecto al pasar el mouse */
+.botom3: hover {
+background-color:#0567c9;
+transform:  trnslatey (-2px);
+
+}	
+   
+	  
+	

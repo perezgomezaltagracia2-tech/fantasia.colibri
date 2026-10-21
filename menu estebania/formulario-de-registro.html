@@ -1,0 +1,202 @@
+<html>
+<body>
+ <link rel="stylesheet" href="pagos.css">
+<center>
+<div class="login">
+<h2>REGISTRO</h2>
+<div class="inputbox">
+<div>
+<p>
+<label>nombre</label>
+<input type="text" placeholder="Estebania">
+</div>
+</p>
+
+<p>
+<div>
+<label>apellido </label>
+<input type="text" placeholder="perez">
+</div>
+</p>
+
+<p>
+<div>
+<label>Correo</label>
+<input type="text" placeholder="alguien@email.com">
+</div>
+</p>
+<p>
+<div>
+<label>Numumero</label>
+<input type="text" placeholder="809 xxx xxx">
+</div>
+</p>
+
+<div class="inputbox">
+<label>recordar</label>
+<input type="password" placeholder="password">
+</div>
+</p>
+
+<p>
+<label for="sexo">Elija el sexo</label>
+<select name="sexo id= sexo">
+<option value="sexo"> Elija el sexo</option>
+<option value="sexo">Femenino</option>
+<option value="sexo">Masculino</option>
+<option value="sexo">Prefiero no decirlo</option>
+</select>
+</p>
+
+<p>
+<label for="sexo">Elija la edad</label>
+<select name="edad" id="edad">
+<option value="edad"> Elija la edad </option>
+<option value="edad">22</option>
+<option value="edad">23</option>
+<option value="edad">24</option>
+<option value="edad">25</option>
+<option value="edad">26</option>
+<option value="edad">27</option>
+</select>
+</p>
+
+<a href="menu.html">
+<button class="mi-boton1">Entrar</button>
+</a>
+<a href="login.html">
+<button class="mi-boton1">Usuario</button>
+</a>
+</body>
+</html>
+
+css
+/* CONENEDOR PRICIPAL DEL FORMULARIO */
+
+<form id="form-pagos" class="formulario{
+ max-width: 450px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formulario-pago h2 {
+  margin-bottom: 24px;
+  color: #333333;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+/* Distribución de los grupos de campos */
+.grupo-campo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fila-campos {
+  display: flex;
+  gap: 15px; /* Separa los campos de expiración y CVV */
+
+
+
+  <h2>Detalles de Pago</h2>
+  
+  <div class="grupo-campo">
+    <label for="nombre">Nombre en la tarjeta</label>
+    <input type="text" id="nombre" name="nombre" required placeholder="ESTEBANIA Pérez">
+  </div>
+
+/*Estilos de las etiquetas (Labels) */
+  <div class=.grupo-campo 
+    label          [fon-size: 14
+	px; 
+	 font-weight: 600;
+  color: #666666;
+  margin-bottom: 8px;
+	
+	
+	
+	="tarjeta">Número de tarjeta</label>
+	
+    <input type="text" id="tarjeta" name="tarjeta" maxlength="19" required placeholder="0000 0000 0000 0000">
+  </div>
+.
+
+
+  <div class="fila-campos">
+    <div class=.grupo-campo { 
+/* grupos de formulario*/
+.firm-group {	
+ margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}	
+	
+input-group label {
+margin-botton: 8px;
+color: #666666;
+font-zize: 14px;
+fon-weinght; 600;
+}	
+	
+ Estilo de los Inputs */
+.form-control {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+	 Efecto Focus (Interacción) */
+.form-control:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 8px rgba(0, 102, 204, 0.2);
+}
+
+/* Distribución en paralelo para Expiración y CVV */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.half-width {
+  flex: 1;
+	
+}	
+	
+      <label for="expiracion">Expiración</label>
+      <input type="text" id="expiracion" name="expiracion" maxlength="5" required placeholder="MM/AA">
+    </div>
+    <div class="grupo-campo">
+      <label for="cvv">CVV</label>
+      <input type="password" id="cvv" name="cvv" maxlength="4" required placeholder="123">
+    </div>
+  </div>
+
+  <button type="submit" class="btn-pagar">Procesar Pago</button>
+</form>
+* Botón de Envío */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #004999;
+}

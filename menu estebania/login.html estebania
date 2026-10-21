@@ -1,0 +1,25 @@
+<HTML>
+ <BODY>
+  <CENTER>
+  <div class ="login">
+  <h2>USUARIO</h2>
+  <div class="inputbox">
+  <input type="text"placeholder="usuario">
+  </div>
+  
+  <div class="inputbox">
+  <input type="password" placeholder="contraseña">
+  </div>
+  
+  <a href="pago.html">
+  <button class="mi-boton1">entrar</button>
+  </a>
+  <div class="group">
+  <a href ="login.html">olvidaste la contraseña</a>
+  <a href="crear_usuario.html">crear usuario</a>
+  </div>
+  </center>
+  </body>
+  </HTML>
+  
+  

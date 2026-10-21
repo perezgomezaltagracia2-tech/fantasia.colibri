@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de ropa interior</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="carrito.js" defer></script>
+</head>
+
+<body>
+<header>
+    <h1>CATÁLOGO DE IMÁGENES</h1>
+    <nav>
+        <a href="Menu.html">Menú principal</a>
+        <a href="oferta estebania.html">Ofertas</a>
+        <a href="servicio.html">Horarios y servicios</a>
+        <a href="contactanos estebania.html">Contáctanos</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Nuestros productos</h2>
+    <section id="catalogo" class="catalogo"></section>
+
+    <hr>
+
+    <section class="carrito-contenedor">
+        <h1>🛒 MI CARRITO DE COMPRAS</h1>
+
+        <table class="tabla-carrito">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="lista-carrito">
+                <tr>
+                    <td colspan="5">Tu carrito está vacío.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>TOTAL A PAGAR: <span id="total">RD$ 0</span></h2>
+
+        <p id="mensaje" aria-live="polite"></p>
+
+        <div class="botones">
+            <button id="pagar" type="button">1. PAGAR</button>
+            <button id="vaciar" type="button">2. VACIAR CARRITO</button>
+            <button id="completar" type="button">3. COMPLETAR PAGO</button>
+        </div>
+
+        <section id="resumen" hidden>
+            <h2>RESUMEN DE LA COMPRA</h2>
+            <div id="detalle-resumen"></div>
+            <h3>Total: <span id="total-resumen">RD$ 0</span></h3>
+            <p>Verifica tu pedido antes de completar la compra.</p>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <p>Catálogo de ropa interior</p>
+</footer>
+</body>
+</html>
