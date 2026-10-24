@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago - Estebania</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe4ec;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .contenedor {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #d99aaa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d63384;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #7a2348;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 11px;
+            margin-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid #e6a6bd;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        .total {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffe4ec;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #c2185b;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .pagar {
+            background: #d63384;
+            color: white;
+        }
+
+        .cancelar {
+            background: #eeeeee;
+            color: #333;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <h1>Catálogo Estebania</h1>
+    <p>Formulario de pago y datos de envío</p>
+
+    <form id="formularioPago">
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" required
+               placeholder="Escribe tu nombre">
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" required
+               placeholder="ejemplo@correo.com">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" required
+               placeholder="Tu número de teléfono">
+
+        <label for="direccion">Dirección de entrega:</label>
+        <textarea id="direccion" rows="3" required
+                  placeholder="Calle, sector y ciudad"></textarea>
+
+        <label for="metodo">Método de pago:</label>
+        <select id="metodo" required>
+            <option value="">Selecciona un método</option>
+            <option value="Efectivo contra entrega">Efectivo contra entrega</option>
+            <option value="Transferencia bancaria">Transferencia bancaria</option>
+            <option value="Tarjeta">Tarjeta (requiere pasarela de pago)</option>
+        </select>
+
+        <div class="total">
+            Total a pagar: RD$ <span id="total">0.00</span>
+        </div>
+
+        <button type="submit" class="pagar">
+            Completar pago
+        </button>
+
+        <button type="button" class="cancelar"
+                onclick="window.location.href='index.html'">
+            Cancelar y volver al catálogo
+        </button>
+
+    </form>
+</div>
+
+<script>
+    // Lee el total enviado desde el carrito.
+    const parametros = new URLSearchParams(window.location.search);
+    const total = Number(parametros.get("total")) || 0;
+
+    document.getElementById("total").textContent =
+        total.toFixed(2);
+
+    document.getElementById("formularioPago")
+        .addEventListener("submit", function(evento) {
+
+            evento.preventDefault();
+
+            const nombre = document.getElementById("nombre").value;
+            const metodo = document.getElementById("metodo").value;
+
+            alert(
+                "¡Gracias por tu compra, " + nombre + "!\n\n" +
+                "Total del pedido: RD$ " + total.toFixed(2) + "\n" +
+                "Método de pago: " + metodo + "\n\n" +
+                "Tu pedido ha sido registrado como demostración."
+            );
+
+            // Este formulario es una demostración.
+            // No realiza cobros reales.
+            this.reset();
+        });
+</script>
+
+</body>
+</html>
